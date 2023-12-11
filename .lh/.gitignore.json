@@ -1,0 +1,26 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1702327207462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702327216252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n node_modules\n dist\n dist-ssr\n *.local\n-*.lh\n+.lh\n \n # Editor directories and files\n .vscode/*\n !.vscode/extensions.json\n"
+                },
+                {
+                    "date": 1702327227327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n node_modules\n dist\n dist-ssr\n *.local\n-.lh\n+./.lh\n \n # Editor directories and files\n .vscode/*\n !.vscode/extensions.json\n"
+                }
+            ],
+            "date": 1702327207462,
+            "name": "Commit-0",
+            "content": "# Logs\nlogs\n*.log\nnpm-debug.log*\nyarn-debug.log*\nyarn-error.log*\npnpm-debug.log*\nlerna-debug.log*\n\nnode_modules\ndist\ndist-ssr\n*.local\n*.lh\n\n# Editor directories and files\n.vscode/*\n!.vscode/extensions.json\n.idea\n.DS_Store\n*.suo\n*.ntvs*\n*.njsproj\n*.sln\n*.sw?\n"
+        }
+    ]
+}
