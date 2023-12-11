@@ -1,0 +1,22 @@
+{
+    "sourceFile": ".eslintrc.cjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1702293747467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702293766158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,7 +9,8 @@\n   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },\n   plugins: ['react-refresh'],\n   rules: {\n     'react-refresh/only-export-components': 'warn',\n-    \"@typescript-eslint/no-explicit-any\": \"off\"\n+    \"@typescript-eslint/no-explicit-any\": \"off\",\n+    \"no-var\": 0\n   },\n }\n"
+                }
+            ],
+            "date": 1702293747467,
+            "name": "Commit-0",
+            "content": "module.exports = {\n  env: { browser: true, es2020: true },\n  extends: [\n    'eslint:recommended',\n    'plugin:@typescript-eslint/recommended',\n    'plugin:react-hooks/recommended',\n  ],\n  parser: '@typescript-eslint/parser',\n  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },\n  plugins: ['react-refresh'],\n  rules: {\n    'react-refresh/only-export-components': 'warn',\n    \"@typescript-eslint/no-explicit-any\": \"off\"\n  },\n}\n"
+        }
+    ]
+}

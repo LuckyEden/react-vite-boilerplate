@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/views/Pokemon.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1702322183609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702322476715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useState, useEffect } from \"react\"\r\n-import { PokemonAPI } from \"../api\";\r\n+import { PokemonAPI } from \"../services\";\r\n \r\n export default function Pokemon() {\r\n     const [ selectedPokemon, setPokemon ] = useState<any>();\r\n     \r\n"
+                }
+            ],
+            "date": 1702322183609,
+            "name": "Commit-0",
+            "content": "import { useState, useEffect } from \"react\"\r\nimport { PokemonAPI } from \"../api\";\r\n\r\nexport default function Pokemon() {\r\n    const [ selectedPokemon, setPokemon ] = useState<any>();\r\n    \r\n    useEffect(() => {\r\n        PokemonAPI.get(\"charizard\").then((pokemon) => {\r\n            console.log(pokemon.name);\r\n            \r\n            setPokemon(pokemon);\r\n        });\r\n    }, []);\r\n\r\n\r\n    return(\r\n        <>\r\n        Selected Pokemon: {selectedPokemon !== undefined && selectedPokemon.name}\r\n        </>\r\n    )\r\n}"
+        }
+    ]
+}

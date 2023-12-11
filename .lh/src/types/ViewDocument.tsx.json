@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/types/ViewDocument.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1702322852346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1702322852346,
+            "name": "Commit-0",
+            "content": "\r\n\r\nexport interface ViewDocument {\r\n    title: string;\r\n    description: string;\r\n}"
+        }
+    ]
+}

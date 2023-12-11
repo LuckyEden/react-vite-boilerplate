@@ -1,24 +1,36 @@
 import { Link, Outlet } from "react-router-dom";
-import { useAppSelector } from "../utils/store/hook";
+import SEO from "./SEO";
 
-export default function Layout() {
-    const pokeName = useAppSelector((state) => state.pokemon.name);
-    return(
+
+export interface LayoutProps {
+
+}
+
+const Layout: React.FC<LayoutProps> = () => {
+
+
+    return (
         <>
-        <header>
-            header - {pokeName}
-        </header>
-        <main>
-            <Link to={"/pokemon"}>
-                <button className="bg-amber-600 p-2 m-2 rounded text-white">
-                    Go Poke
-                </button>
-            </Link>
-            <Outlet />
-        </main>
-        <footer>
-            footer
-        </footer>
+            <SEO
+                title="Test"
+                description="This is layout"
+            />
+            <header>
+                header
+            </header>
+            <main>
+                <Link to={"/pokemon"}>
+                    <button className="bg-amber-600 p-2 m-2 rounded text-white">
+                        Go Poke
+                    </button>
+                </Link>
+                <Outlet />
+            </main>
+            <footer>
+                footer
+            </footer>
         </>
     )
 }
+
+export default Layout;

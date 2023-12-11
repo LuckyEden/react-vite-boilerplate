@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/store/reducers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1702323981639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702325660011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,7 @@\n import dataReducer, { setData } from \"./dataReducer\";\r\n \r\n export {\r\n     setData,\r\n-    changeViewState,\r\n-\r\n-    dataReducer,\r\n-    viewReducer\r\n+    \r\n+    dataReducer\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1702323981639,
+            "name": "Commit-0",
+            "content": "import viewReducer, { changeViewState } from \"./viewReducer\";\r\nimport dataReducer, { setData } from \"./dataReducer\";\r\n\r\nexport {\r\n    setData,\r\n    changeViewState,\r\n\r\n    dataReducer,\r\n    viewReducer\r\n}"
+        }
+    ]
+}

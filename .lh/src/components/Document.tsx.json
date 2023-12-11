@@ -1,0 +1,70 @@
+{
+    "sourceFile": "src/components/Document.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1702323036408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702323185850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,9 @@\n \r\n \r\n const Document: React.FC = () => {\r\n-\r\n+    return(\r\n+        <>\r\n+        \r\n+        </>\r\n+    )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702323227382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,7 @@\n         <>\r\n         \r\n         </>\r\n     )\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702323316570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,14 @@\n+import Helmet from \"react-helmet\";\r\n \r\n-\r\n const Document: React.FC = () => {\r\n     return(\r\n         <>\r\n-        \r\n+            <Helmet>\r\n+                <title>\r\n+                    Deneme\r\n+                </title>\r\n+            </Helmet>\r\n         </>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1702323321826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import Helmet from \"react-helmet\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    Deneme\r\n+                </title>\r\n+            </Helmet>\r\n+\r\n+            \r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702323349042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import Helmet from \"react-helmet\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    Deneme\r\n+                </title>\r\n+            </Helmet>\r\n+\r\n+\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324052034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+import Helmet from \"react-helmet\";\r\n+import { useAppSelector } from \"../store/hook\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    const pageTitle = useAppSelector((state) => state.pageState.pageTitle);\r\n+    const pageDescription = useAppSelector((state) => state.pageState.pageDescription);\r\n+\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    Deneme\r\n+                </title>\r\n+            </Helmet>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324060917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import Helmet from \"react-helmet\";\r\n+import { useAppSelector } from \"../store/hook\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    const pageTitle = useAppSelector((state) => state.pageState.pageTitle);\r\n+    const pageDescription = useAppSelector((state) => state.pageState.pageDescription);\r\n+\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    {pageTitle}\r\n+                </title>\r\n+                \r\n+            </Helmet>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324086198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import Helmet from \"react-helmet\";\r\n+import { useAppSelector } from \"../store/hook\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    const pageTitle = useAppSelector((state) => state.pageState.pageTitle);\r\n+    const pageDescription = useAppSelector((state) => state.pageState.pageDescription);\r\n+\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    {pageTitle}\r\n+                </title>\r\n+                <meta name=\"description\" content={pageDescription} />\r\n+            </Helmet>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324468261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import Helmet from \"react-helmet\";\r\n+import { useAppSelector } from \"../store/hook\";\r\n+import { useDocument } from \"../utils/hooks\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    const { \r\n+        pageTitle,\r\n+        pageDescription\r\n+    } = useDocument();\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    {pageTitle}\r\n+                </title>\r\n+                <meta name=\"description\" content={pageDescription} />\r\n+            </Helmet>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324763316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import Helmet from \"react-helmet-async\";\r\n+import { useDocument } from \"../utils/hooks\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    const { \r\n+        pageTitle,\r\n+        pageDescription\r\n+    } = useDocument();\r\n+\r\n+    return (\r\n+        <>\r\n+            <Helmet>\r\n+                <title>\r\n+                    {pageTitle}\r\n+                </title>\r\n+                <meta name=\"description\" content={pageDescription} />\r\n+            </Helmet>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324791455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { Helmet } from \"react-helmet-async\";\r\n+import { useDocument } from \"../utils/hooks\";\r\n+\r\n+const Document: React.FC = () => {\r\n+    const {\r\n+        pageTitle,\r\n+        pageDescription\r\n+    } = useDocument();\r\n+\r\n+    return (\r\n+        <>\r\n+            <Helmet >\r\n+                <title>\r\n+                    {pageTitle}\r\n+                </title>\r\n+                <meta name=\"description\" content={pageDescription} />\r\n+            </Helmet>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702324903121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,19 @@\n import { Helmet } from \"react-helmet-async\";\r\n import { useDocument } from \"../utils/hooks\";\r\n+import { useEffect } from \"react\";\r\n \r\n const Document: React.FC = () => {\r\n     const {\r\n         pageTitle,\r\n         pageDescription\r\n     } = useDocument();\r\n \r\n+    useEffect(() => {\r\n+        console.log(pageTitle + \"sa\");\r\n+        \r\n+    }, []);\r\n+\r\n     return (\r\n         <>\r\n             <Helmet >\r\n                 <title>\r\n@@ -18,157 +24,5 @@\n         </>\r\n     )\r\n }\r\n \r\n-export default Document;\n-import Helmet from \"react-helmet-async\";\r\n-import { useDocument } from \"../utils/hooks\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    const { \r\n-        pageTitle,\r\n-        pageDescription\r\n-    } = useDocument();\r\n-\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    {pageTitle}\r\n-                </title>\r\n-                <meta name=\"description\" content={pageDescription} />\r\n-            </Helmet>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-import { useAppSelector } from \"../store/hook\";\r\n-import { useDocument } from \"../utils/hooks\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    const { \r\n-        pageTitle,\r\n-        pageDescription\r\n-    } = useDocument();\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    {pageTitle}\r\n-                </title>\r\n-                <meta name=\"description\" content={pageDescription} />\r\n-            </Helmet>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-import { useAppSelector } from \"../store/hook\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    const pageTitle = useAppSelector((state) => state.pageState.pageTitle);\r\n-    const pageDescription = useAppSelector((state) => state.pageState.pageDescription);\r\n-\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    {pageTitle}\r\n-                </title>\r\n-                <meta name=\"description\" content={pageDescription} />\r\n-            </Helmet>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-import { useAppSelector } from \"../store/hook\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    const pageTitle = useAppSelector((state) => state.pageState.pageTitle);\r\n-    const pageDescription = useAppSelector((state) => state.pageState.pageDescription);\r\n-\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    {pageTitle}\r\n-                </title>\r\n-                \r\n-            </Helmet>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-import { useAppSelector } from \"../store/hook\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    const pageTitle = useAppSelector((state) => state.pageState.pageTitle);\r\n-    const pageDescription = useAppSelector((state) => state.pageState.pageDescription);\r\n-\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    Deneme\r\n-                </title>\r\n-            </Helmet>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    Deneme\r\n-                </title>\r\n-            </Helmet>\r\n-\r\n-\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    return (\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    Deneme\r\n-                </title>\r\n-            </Helmet>\r\n-\r\n-            \r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default Document;\n-import Helmet from \"react-helmet\";\r\n-\r\n-const Document: React.FC = () => {\r\n-    return(\r\n-        <>\r\n-            <Helmet>\r\n-                <title>\r\n-                    Deneme\r\n-                </title>\r\n-            </Helmet>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n export default Document;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1702325001217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,25 +2,18 @@\n import { useDocument } from \"../utils/hooks\";\r\n import { useEffect } from \"react\";\r\n \r\n const Document: React.FC = () => {\r\n-    const {\r\n-        pageTitle,\r\n-        pageDescription\r\n-    } = useDocument();\r\n+    \r\n+    \r\n \r\n-    useEffect(() => {\r\n-        console.log(pageTitle + \"sa\");\r\n-        \r\n-    }, []);\r\n-\r\n     return (\r\n         <>\r\n             <Helmet >\r\n                 <title>\r\n-                    {pageTitle}\r\n+                    \r\n                 </title>\r\n-                <meta name=\"description\" content={pageDescription} />\r\n+                <meta name=\"description\" content={\"pageDescription\"} />\r\n             </Helmet>\r\n         </>\r\n     )\r\n }\r\n"
+                }
+            ],
+            "date": 1702323036408,
+            "name": "Commit-0",
+            "content": "\r\n\r\nconst Document: React.FC = () => {\r\n\r\n}"
+        }
+    ]
+}

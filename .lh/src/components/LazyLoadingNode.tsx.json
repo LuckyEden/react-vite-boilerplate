@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/LazyLoadingNode.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1702325512028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702325587834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+\r\n+\r\n+const LazyLoadingNode: React.FC = () => {\r\n+    return(\"Loading...\")\r\n+}\r\n+\r\n+export default LazyLoadingNode;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1702325512028,
+            "name": "Commit-0",
+            "content": "\r\n\r\nconst LazyLoadingNode: React.FC = () => {\r\n    return(\"Loading ...\")\r\n}"
+        }
+    ]
+}

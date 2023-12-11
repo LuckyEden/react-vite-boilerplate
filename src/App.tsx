@@ -1,32 +1,45 @@
-import { Routes, Route } from "react-router-dom";
-import routes, { IRoute } from "./utils/routes";
-
+import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import NestedRoutes, { RouteComponentProps } from "./Routes";
+import LazyLoadingNode from "./components/LazyLoadingNode";
 
 function App() {
 
-  function GetRoutes(route:IRoute, index:number) {
-    if(route === undefined) return null;
+  const GetNestedAllRoutes = (route: RouteComponentProps) => {
+    if (route === undefined) return null;
+    let children = null;
+
+    if (route.childRoutes !== undefined) {
+      children = route.childRoutes.map((subroute, _index) => (GetNestedAllRoutes(subroute)));
+    }
+
     return (
-      <Route 
-          path={route.path} 
-          element={route.element} 
-          key={route.path + "_" + index.toString()}
-          >
-            {route.childRoutes !== undefined && route.childRoutes.map((route, _index) => {
-              return GetRoutes(route, _index);
-            })}
+      <Route
+        key={window.location.pathname}
+        path={route.path}
+        element={route.component &&
+          <>
+            <Suspense fallback={<LazyLoadingNode />}>
+              {React.createElement(route.component, {
+                ...route.props
+              }, children)}
+            </Suspense>
+          </>
+        }
+      >
+        {children}
       </Route>
     )
   }
- 
-  
+
+
   return (
     <>
-    <Routes>
-      {routes.map((route, index) => {
-        return GetRoutes(route, index);
-      })}
-    </Routes>
+      <Routes>
+        {NestedRoutes.map((route) => (
+          GetNestedAllRoutes(route)
+        ))}
+      </Routes>
     </>
   )
 }

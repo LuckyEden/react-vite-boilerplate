@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/main.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1702293803683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702322172236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-import React from 'react'\n-import ReactDOM from 'react-dom/client'\n-import App from './App.tsx'\n-import './styles/index.less'\n+import React from 'react';\n+import ReactDOM from 'react-dom/client';\n+import App from './App.tsx';\n+import './styles/index.less';\n \n+import { Provider } from 'react-redux';\n import { BrowserRouter } from \"react-router-dom\";\n-import { Provider } from 'react-redux';\n-import store from './utils/store/index.ts';\n+import store from './store/index.ts';\n \n \n \n ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(\n"
+                },
+                {
+                    "date": 1702324785094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import React from 'react';\n+import ReactDOM from 'react-dom/client';\n+import App from './App.tsx';\n+import './styles/index.less';\n+\n+import { Provider } from 'react-redux';\n+import { BrowserRouter } from \"react-router-dom\";\n+import store from './store/index.ts';\n+import { HelmetProvider } from 'react-helmet-async';\n+\n+\n+\n+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(\n+  <React.StrictMode>\n+    <Provider store={store}>\n+      <HelmetProvider>\n+        <BrowserRouter>\n+          <App />\n+        </BrowserRouter>\n+      </HelmetProvider>\n+    </Provider>\n+  </React.StrictMode>,\n+)\n"
+                },
+                {
+                    "date": 1702325699288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n import ReactDOM from 'react-dom/client';\n import App from './App.tsx';\n import './styles/index.less';\n \n+import { HelmetProvider } from 'react-helmet-async';\n import { Provider } from 'react-redux';\n import { BrowserRouter } from \"react-router-dom\";\n import store from './store/index.ts';\n-import { HelmetProvider } from 'react-helmet-async';\n \n \n \n ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(\n@@ -20,24 +20,4 @@\n       </HelmetProvider>\n     </Provider>\n   </React.StrictMode>,\n )\n-import React from 'react';\n-import ReactDOM from 'react-dom/client';\n-import App from './App.tsx';\n-import './styles/index.less';\n-\n-import { Provider } from 'react-redux';\n-import { BrowserRouter } from \"react-router-dom\";\n-import store from './store/index.ts';\n-\n-\n-\n-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(\n-  <React.StrictMode>\n-    <Provider store={store}>\n-      <BrowserRouter>\n-        <App />\n-      </BrowserRouter>\n-    </Provider>\n-  </React.StrictMode>,\n-)\n"
+                }
+            ],
+            "date": 1702293803683,
+            "name": "Commit-0",
+            "content": "import React from 'react'\nimport ReactDOM from 'react-dom/client'\nimport App from './App.tsx'\nimport './styles/index.less'\n\nimport { BrowserRouter } from \"react-router-dom\";\nimport { Provider } from 'react-redux';\nimport store from './utils/store/index.ts';\n\n\n\nReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(\n  <React.StrictMode>\n    <Provider store={store}>\n      <BrowserRouter>\n        <App />\n      </BrowserRouter>\n    </Provider>\n  </React.StrictMode>,\n)\n"
+        }
+    ]
+}

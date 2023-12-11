@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/store/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1702323987993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1702325648139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import * as reducers from \"./reducers\";\r\n \r\n const store = configureStore({\r\n   reducer: {\r\n-    pageState: reducers.viewReducer\r\n+    \r\n   },\r\n })\r\n \r\n // Infer the `RootState` and `AppDispatch` types from the store itself\r\n"
+                },
+                {
+                    "date": 1702325745812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import * as reducers from \"./reducers\";\r\n \r\n const store = configureStore({\r\n   reducer: {\r\n-    \r\n+    data: reducers.dataReducer\r\n   },\r\n })\r\n \r\n // Infer the `RootState` and `AppDispatch` types from the store itself\r\n"
+                }
+            ],
+            "date": 1702323987993,
+            "name": "Commit-0",
+            "content": "import { configureStore } from '@reduxjs/toolkit'\r\nimport * as reducers from \"./reducers\";\r\n\r\nconst store = configureStore({\r\n  reducer: {\r\n    pageState: reducers.viewReducer\r\n  },\r\n})\r\n\r\n// Infer the `RootState` and `AppDispatch` types from the store itself\r\nexport type RootState = ReturnType<typeof store.getState>\r\n// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}\r\nexport type AppDispatch = typeof store.dispatch\r\n\r\nexport {\r\n    reducers\r\n}\r\n\r\nexport default store;"
+        }
+    ]
+}

@@ -3,7 +3,7 @@ import * as reducers from "./reducers";
 
 const store = configureStore({
   reducer: {
-    pokemon: reducers.counterReducer
+    data: reducers.dataReducer
   },
 })
 
